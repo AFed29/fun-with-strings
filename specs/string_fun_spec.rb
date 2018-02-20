@@ -6,6 +6,7 @@ class TestStringFun < MiniTest::Test
     @string1 = "hello"
     @string2 = "goodbye"
     @string3 = "racecar"
+    @string4 = "blacksmith"
   end
 
   def test_if_equal__equal()
@@ -29,13 +30,13 @@ class TestStringFun < MiniTest::Test
   end
 
   def test_if_isogram__is_isogram()
-    result = StringFun.isogram(@string3)
-    assert_equal("Racecar is an isogram", result)
+    result = StringFun.isogram(@string4)
+    assert_equal("Blacksmith is an isogram", result)
   end
 
   def test_if_isogram__is_not_isogram
-    result = StringFun.isogram(@string1)
-    assert_equal("Hello is not an isogram", result)
+    result = StringFun.isogram(@string3)
+    assert_equal("Racecar is not an isogram", result)
   end
 
 end

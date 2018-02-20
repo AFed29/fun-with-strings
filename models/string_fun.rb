@@ -16,7 +16,8 @@ class StringFun
 
   def self.isogram(string)
     previous_char = ""
-    string.downcase.each_char do |char|
+    sorted_letters = string.chars.sort
+    sorted_letters.each do |char|
       if previous_char == char
         return "#{string.capitalize} is not an isogram"
       end
