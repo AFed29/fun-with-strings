@@ -7,6 +7,8 @@ class TestStringFun < MiniTest::Test
     @string2 = "goodbye"
     @string3 = "racecar"
     @string4 = "blacksmith"
+    @string5 = "listen"
+    @string6 = "silent"
   end
 
   def test_if_equal__equal()
@@ -37,6 +39,16 @@ class TestStringFun < MiniTest::Test
   def test_if_isogram__is_not_isogram
     result = StringFun.isogram(@string3)
     assert_equal("Racecar is not an isogram", result)
+  end
+
+  def test_if_anagram__is_anagram
+    result = StringFun.anagram(@string5, @string6)
+    assert_equal("Listen is an anagram of silent", result)
+  end
+
+  def test_if_anagram__is_not_anagram
+    result = StringFun.anagram(@string4, @string6)
+    assert_equal("Blacksmith is not an anagram of silent", result)
   end
 
 end
