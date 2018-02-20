@@ -3,6 +3,10 @@ require('sinatra/contrib/all')
 require('pry-byebug')
 require_relative('./models/string_fun.rb')
 
+get '/' do
+  erb(:home)
+end
+
 get '/equal/:string1/:string2' do
   @result = StringFun.equal(params[:string1], params[:string2])
   erb(:result)

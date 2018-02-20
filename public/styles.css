@@ -1,0 +1,17 @@
+body {
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: skyblue;
+}
+
+nav {
+  text-align: left;
+}
+
+body > ul {
+  display: inline-block;
+}
